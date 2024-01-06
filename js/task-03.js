@@ -29,3 +29,20 @@ const galleryMaker = images => {
 };
 
 galleryMaker(images);
+
+const domGallery = document.querySelector(".gallery").style;
+domGallery.display = 'flex';
+domGallery.flexDirection = 'column';
+domGallery.alignItems = 'center';
+domGallery.listStyle = 'none';
+domGallery.gap = '30px';
+
+
+const domGalleryImages = document.querySelectorAll('.gallery .galleryImage');
+
+// Loop through each .galleryImage and set styles
+domGalleryImages.forEach(image => {
+  image.style.width = '450px';
+  image.style.height = '300px';
+  image.style.borderRadius = '10px';
+});
